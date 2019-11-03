@@ -1,4 +1,5 @@
 package com.mcy.qqdemo.custom;
+
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -11,9 +12,9 @@ import java.io.IOException;
 
 public class QQHttpClient {
     //QQ互联中提供的 appid 和 appkey
-    public static final String APPID = "101814165";
+    public static final String APPID = "appid";
 
-    public static final String APPKEY = "41eb5653ec57e17b5dde40cbc3fea58c";
+    public static final String APPKEY = "appkey";
 
 
     private static JSONObject parseJSONP(String jsonp){

@@ -82,9 +82,10 @@ public class QQController {
                 "&oauth_consumer_key="+ QQHttpClient.APPID +
                 "&openid=" + openid;
 
+        //返回用户的信息
         JSONObject jsonObject = QQHttpClient.getUserInfo(url);
 
-        //也可以放到Redis和mysql中
+        //也可以放到Redis和mysql中，只取出了部分数据，根据自己需要取
         session.setAttribute("openid",openid);  //openid,用来唯一标识qq用户
         session.setAttribute("nickname",(String)jsonObject.get("nickname")); //QQ名
         session.setAttribute("figureurl_qq_2",(String)jsonObject.get("figureurl_qq_2")); //大小为100*100像素的QQ头像URL
